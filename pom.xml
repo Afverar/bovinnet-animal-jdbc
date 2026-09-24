@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>co.sena.bovinnet</groupId>
+    <artifactId>bovinnet-animal-jdbc</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>BovinNet - Modulo de gestion de animales (JDBC)</name>
+    <description>
+        Modulo de codificacion del proyecto BovinNet correspondiente a la
+        evidencia GA7-220501096-AA2-EV01, con operaciones de insercion,
+        consulta, actualizacion y eliminacion sobre la entidad Animal,
+        usando JDBC contra la base de datos MySQL "bovinnet".
+    </description>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- Conector JDBC oficial de MySQL -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.3.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>bovinnet-animal-jdbc</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>co.sena.bovinnet.App</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
